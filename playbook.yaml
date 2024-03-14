@@ -1,0 +1,9 @@
+- name: instalando pacotes
+  hosts: localhost
+  tasks:
+    - name: instalando docker
+      become: true
+      apt:
+        name: ['docker', 'docker-compose']
+        state: present
+        update_cache: yes
